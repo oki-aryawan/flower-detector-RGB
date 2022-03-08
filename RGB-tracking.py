@@ -10,7 +10,7 @@ cv2.createTrackbar('max_blue', 'Track Bars', 0, 255, do_nothing)
 cv2.createTrackbar('max_green', 'Track Bars', 0, 255, do_nothing)
 cv2.createTrackbar('max_red', 'Track Bars', 0, 255, do_nothing)
 
-img = cv2.imread('blue-flower-2.jpeg')
+img = cv2.imread('flower-2.jpeg')
 img = cv2.resize(img, (600, 426))
 img_hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
 

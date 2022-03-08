@@ -4,8 +4,8 @@ import numpy as np
 import imutils
 
 #RGB values from RGB-tracking.py
-min_blue, min_green, min_red = 0, 0, 125
-max_blue, max_green, max_red = 146, 87, 255
+min_blue, min_green, min_red = 0, 160, 165
+max_blue, max_green, max_red = 6, 255, 255
 
 v = cv2.__version__.split('.')[0]
 
@@ -37,10 +37,10 @@ while True:
         (x_min, y_min, box_width, box_height) = cv2.boundingRect(contours[0])
         cv2.rectangle(img, (x_min - 15, y_min - 15),
                       (x_min + box_width + 15, y_min + box_height + 15),
-                      (225, 0, 0), 3)
-        label = 'BLue Color'
+                      (0, 0, 255), 3)
+        label = 'Red Flower'
         cv2.putText(img, label, (x_min - 5, y_min -25),
-                    cv2.FONT_HERSHEY_SIMPLEX, 1.0, (225, 0, 0), 2)
+                    cv2.FONT_HERSHEY_SIMPLEX, 1.0, (0, 0, 225), 2)
 
     cv2.namedWindow('Streaming Cam', cv2.WINDOW_NORMAL)
     cv2.imshow('Streaming Cam', img)
